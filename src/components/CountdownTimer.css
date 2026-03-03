@@ -1,0 +1,80 @@
+.countdown-container {
+       margin-bottom: 3rem;
+       display: flex;
+       justify-content: center;
+       z-index: 10;
+}
+
+.countdown-grid {
+       display: flex;
+       gap: 1.5rem;
+}
+
+.time-block {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       min-width: 90px;
+       padding: 15px 10px;
+       background: rgba(15, 23, 42, 0.4);
+       border: 1px solid var(--glass-border);
+       border-radius: 12px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(8px);
+       -webkit-backdrop-filter: blur(8px);
+       overflow: hidden;
+}
+
+.time-value {
+       font-family: var(--font-heading);
+       font-size: 2.5rem;
+       font-weight: 800;
+       line-height: 1;
+       margin-bottom: 5px;
+       text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.time-label {
+       font-size: 0.75rem;
+       letter-spacing: 2px;
+       color: var(--text-muted);
+       font-weight: 600;
+}
+
+.block-glare {
+       position: absolute;
+       top: -50%;
+       left: -50%;
+       width: 200%;
+       height: 200%;
+       background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+       opacity: 0;
+       transform: rotate(45deg);
+       transition: opacity 0.3s ease;
+}
+
+.time-block:hover .block-glare {
+       opacity: 1;
+}
+
+@media (max-width: 768px) {
+       .countdown-grid {
+              gap: 0.8rem;
+       }
+
+       .time-block {
+              min-width: 65px;
+              padding: 10px 5px;
+       }
+
+       .time-value {
+              font-size: 1.8rem;
+       }
+
+       .time-label {
+              font-size: 0.6rem;
+              letter-spacing: 1px;
+       }
+}

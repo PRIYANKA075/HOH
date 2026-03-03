@@ -1,0 +1,467 @@
+.intro-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background: var(--bg-dark);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       z-index: 9999;
+       overflow: hidden;
+}
+
+.particles-container {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       pointer-events: none;
+}
+
+.particle {
+       position: absolute;
+       width: 2px;
+       height: 2px;
+       background: var(--neon-blue);
+       border-radius: 50%;
+       box-shadow: 0 0 10px 2px var(--neon-blue-glow);
+       opacity: 0.5;
+       animation: float-up 5s linear infinite;
+}
+
+@keyframes float-up {
+       0% {
+              transform: translateY(100vh) scale(0);
+              opacity: 0;
+       }
+
+       20% {
+              opacity: 0.8;
+       }
+
+       80% {
+              opacity: 0.8;
+       }
+
+       100% {
+              transform: translateY(-10vh) scale(1.5);
+              opacity: 0;
+       }
+}
+
+/* Distribute particles roughly (doing a few via CSS map ideally, but manual pseudo-classes for simple setup) */
+.particle:nth-child(even) {
+       animation-duration: 7s;
+       background: var(--gold);
+       box-shadow: 0 0 8px 1px var(--gold-glow);
+}
+
+.particle:nth-child(3n) {
+       animation-duration: 4s;
+}
+
+.particle:nth-child(1) {
+       left: 10%;
+       animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+       left: 20%;
+       animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+       left: 30%;
+       animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+       left: 40%;
+       animation-delay: 0.5s;
+}
+
+.particle:nth-child(5) {
+       left: 50%;
+       animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+       left: 60%;
+       animation-delay: 1.5s;
+}
+
+.particle:nth-child(7) {
+       left: 70%;
+       animation-delay: 0.2s;
+}
+
+.particle:nth-child(8) {
+       left: 80%;
+       animation-delay: 2.5s;
+}
+
+.particle:nth-child(9) {
+       left: 90%;
+       animation-delay: 1.2s;
+}
+
+.particle:nth-child(10) {
+       left: 15%;
+       animation-delay: 3.5s;
+}
+
+/* Just a few to give depth */
+
+.logo-container {
+       position: relative;
+       width: 300px;
+       height: 300px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.hexagon-wrapper {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+}
+
+.hexagon-border-1,
+.hexagon-border-2 {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       border: 2px dashed var(--neon-blue);
+       border-radius: 50%;
+       box-shadow: 0 0 20px var(--neon-blue-glow);
+}
+
+.hexagon-border-2 {
+       border: 1px solid var(--gold);
+       transform: scale(0.85);
+       box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.logo-content {
+       text-align: center;
+       z-index: 2;
+}
+
+.hoh-title {
+       font-size: 2rem;
+       font-weight: 900;
+       text-shadow: 0 0 15px var(--neon-blue);
+       color: white;
+       margin-bottom: 0.5rem;
+}
+
+.version {
+       color: var(--gold);
+       text-shadow: 0 0 15px var(--gold);
+}
+
+.motto {
+       font-size: 0.8rem;
+       letter-spacing: 2px;
+       color: var(--text-muted);
+       font-weight: 600;
+}
+
+.dot {
+       color: var(--neon-blue);
+       margin: 0 5px;
+}
+
+.ieee-cs-badge {
+       margin-top: 4rem;
+       display: flex;
+       align-items: center;
+       gap: 1rem;
+       background: var(--glass-bg);
+       border: 1px solid var(--glass-border);
+       padding: 0.75rem 1.5rem;
+       border-radius: 30px;
+       box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+       backdrop-filter: blur(10px);
+}
+
+.badge-text {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+}
+
+.badge-text span {
+       font-size: 0.7rem;
+       color: var(--text-muted);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+}
+
+.badge-text strong {
+       font-size: 1.1rem;
+       color: white;
+       letter-spacing: 1px;
+}
+
+.loading-bar-container {
+       margin-top: 3rem;
+       width: 250px;
+       height: 4px;
+       background: rgba(255, 255, 255, 0.1);
+       border-radius: 4px;
+       overflow: hidden;
+       position: relative;
+}
+
+.loading-bar-fill {
+       position: absolute;
+       box-shadow: 0 0 10px 2px var(--neon-blue-glow);
+       opacity: 0.5;
+       animation: float-up 5s linear infinite;
+}
+
+@keyframes float-up {
+       0% {
+              transform: translateY(100vh) scale(0);
+              opacity: 0;
+       }
+
+       20% {
+              opacity: 0.8;
+       }
+
+       80% {
+              opacity: 0.8;
+       }
+
+       100% {
+              transform: translateY(-10vh) scale(1.5);
+              opacity: 0;
+       }
+}
+
+/* Distribute particles roughly (doing a few via CSS map ideally, but manual pseudo-classes for simple setup) */
+.particle:nth-child(even) {
+       animation-duration: 7s;
+       background: var(--gold);
+       box-shadow: 0 0 8px 1px var(--gold-glow);
+}
+
+.particle:nth-child(3n) {
+       animation-duration: 4s;
+}
+
+.particle:nth-child(1) {
+       left: 10%;
+       animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+       left: 20%;
+       animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+       left: 30%;
+       animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+       left: 40%;
+       animation-delay: 0.5s;
+}
+
+.particle:nth-child(5) {
+       left: 50%;
+       animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+       left: 60%;
+       animation-delay: 1.5s;
+}
+
+.particle:nth-child(7) {
+       left: 70%;
+       animation-delay: 0.2s;
+}
+
+.particle:nth-child(8) {
+       left: 80%;
+       animation-delay: 2.5s;
+}
+
+.particle:nth-child(9) {
+       left: 90%;
+       animation-delay: 1.2s;
+}
+
+.particle:nth-child(10) {
+       left: 15%;
+       animation-delay: 3.5s;
+}
+
+/* Just a few to give depth */
+
+.logo-container {
+       position: relative;
+       width: 300px;
+       height: 300px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.hexagon-wrapper {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+}
+
+.hexagon-border-1,
+.hexagon-border-2 {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       border: 2px dashed var(--neon-blue);
+       border-radius: 50%;
+       box-shadow: 0 0 20px var(--neon-blue-glow);
+}
+
+.hexagon-border-2 {
+       border: 1px solid var(--gold);
+       transform: scale(0.85);
+       box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.logo-content {
+       text-align: center;
+       z-index: 2;
+}
+
+.hoh-title {
+       font-size: 2rem;
+       font-weight: 900;
+       text-shadow: 0 0 15px var(--neon-blue);
+       color: white;
+       margin-bottom: 0.5rem;
+}
+
+.version {
+       color: var(--gold);
+       text-shadow: 0 0 15px var(--gold);
+}
+
+.motto {
+       font-size: 0.8rem;
+       letter-spacing: 2px;
+       color: var(--text-muted);
+       font-weight: 600;
+}
+
+.dot {
+       color: var(--neon-blue);
+       margin: 0 5px;
+}
+
+.ieee-cs-badge {
+       margin-top: 4rem;
+       display: flex;
+       align-items: center;
+       gap: 1rem;
+       background: var(--glass-bg);
+       border: 1px solid var(--glass-border);
+       padding: 0.75rem 1.5rem;
+       border-radius: 30px;
+       box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+       backdrop-filter: blur(10px);
+}
+
+.badge-text {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+}
+
+.badge-text span {
+       font-size: 0.7rem;
+       color: var(--text-muted);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+}
+
+.badge-text strong {
+       font-size: 1.1rem;
+       color: white;
+       letter-spacing: 1px;
+}
+
+.loading-bar-container {
+       margin-top: 3rem;
+       width: 250px;
+       height: 4px;
+       background: rgba(255, 255, 255, 0.1);
+       border-radius: 4px;
+       overflow: hidden;
+       position: relative;
+}
+
+.loading-bar-fill {
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       background: linear-gradient(90deg, var(--neon-blue), var(--gold));
+       box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.logo-container {
+       position: relative;
+       width: 400px;
+       max-width: 90vw;
+       height: auto;
+       aspect-ratio: 16/9;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 2rem;
+}
+
+.actual-logo {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       border-radius: 12px;
+       position: relative;
+       z-index: 10;
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       background: var(--bg-deep);
+}
+
+.cinematic-flare {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 140%;
+       height: 140%;
+       background: radial-gradient(circle, rgba(255, 193, 7, 0.5) 0%, rgba(0, 243, 255, 0.3) 30%, transparent 60%);
+       filter: blur(40px);
+       z-index: 0;
+       pointer-events: none;
+       mix-blend-mode: screen;
+}
+
+.intro-overlay {
+       background: radial-gradient(circle at center, #020210 0%, var(--bg-deep) 100%);
+}
