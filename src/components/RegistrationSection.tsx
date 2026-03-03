@@ -26,9 +26,6 @@ interface FormErrors {
        [key: string]: string;
 }
 
-// Constants
-const PROJECT_TYPES = ['Hardware', 'Software'];
-
 const RegistrationSection: React.FC = () => {
        const [currentStep, setCurrentStep] = useState(1);
        const [isSubmitting, setIsSubmitting] = useState(false);
@@ -281,13 +278,6 @@ const RegistrationSection: React.FC = () => {
                      };
 
                      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwk4fhuTSuE4124FzgEgs_om5rwTzR_7OwfBUAyG-VLd0GAvYyFu3vZ9FvBfP_Elqro/exec';
-
-                     if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL') {
-                            console.log("Form Data Output:", submitData);
-                            showNotification('warning', 'Please setup the Google Script URL first!');
-                            setIsSubmitting(false);
-                            return;
-                     }
 
                      const response = await fetch(GOOGLE_SCRIPT_URL, {
                             method: 'POST',

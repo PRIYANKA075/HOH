@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, ShieldCheck, Gamepad2, Code2, Cloud, BrainCircuit, Smartphone, Lightbulb } from 'lucide-react';
+import { Cpu, Wifi, ShieldCheck, Cloud, BrainCircuit, Smartphone, Lightbulb } from 'lucide-react';
 import './TracksSection.css';
 
 const hardwareTracks = [
