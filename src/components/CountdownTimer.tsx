@@ -11,7 +11,7 @@ interface TimeLeft {
 
 const CountdownTimer: React.FC = () => {
        // Target date for the hackathon (Adjust this!)
-       const targetDate = new Date('2026-03-26T09:00:00').getTime();
+       const targetDate = new Date('2026-04-07T09:00:00').getTime();
 
        const calculateTimeLeft = (): TimeLeft => {
               const now = new Date().getTime();
