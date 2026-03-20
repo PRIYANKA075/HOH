@@ -43,7 +43,7 @@ const CountdownTimer: React.FC = () => {
               }, 1000);
 
               return () => clearInterval(timer);
-       }, []);
+       }, [calculateTimeLeft]);
 
        const formatTime = (time: number) => {
               return time < 10 ? `0${time}` : time;

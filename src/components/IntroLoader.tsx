@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, Terminal } from 'lucide-react';
 // import logoUrl from '../assets/logo3.jpg';
 import './IntroLoader.css';
 
@@ -25,6 +24,21 @@ const IntroLoader: React.FC<IntroLoaderProps> = ({ isLoading }) => {
                                    </div>
 
                                    <div className="logo-content" style={{ position: 'relative' }}>
+                                          {/* Premium Badge */}
+                                          <motion.div
+                                                 className="premium-badge"
+                                                 initial={{ scale: 0, opacity: 0, rotate: -180 }}
+                                                 animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                                                 transition={{
+                                                        duration: 1.2,
+                                                        ease: 'easeOut',
+                                                        delay: 0.2
+                                                 }}
+                                          >
+                                                 <span className="premium-text"></span>
+                                                 <div className="premium-glow"></div>
+                                          </motion.div>
+
                                           {/* Cinematic Background Flare */}
                                           <motion.div
                                                  className="cinematic-flare"
@@ -42,9 +56,9 @@ const IntroLoader: React.FC<IntroLoaderProps> = ({ isLoading }) => {
                                                  animate={{ opacity: 1 }}
                                                  transition={{ duration: 0.8, delay: 0.5 }}
                                           >
-                                                 <span className="text-sm tracking-[0.2em] text-cyan-400 font-bold">IN ASSOCIATION WITH</span>
+                                                 <span className="text-sm tracking-[0.2em] text-cyan-400 font-bold">JEPPIAAR ENGINEERING COLLEGE</span>
                                                  <br />
-                                                 <span className="text-lg font-heading text-white tracking-wider mt-1 block">IEEE COMPUTER SCIENCE SOCIETY</span>
+                                                 <span className="text-lg font-heading text-white tracking-wider mt-1 block">IEEE COMPUTER SOCIETY</span>
                                           </motion.div>
                                           <motion.h1
                                                  className="hoh-title"
@@ -53,6 +67,7 @@ const IntroLoader: React.FC<IntroLoaderProps> = ({ isLoading }) => {
                                                  transition={{ delay: 0.5, duration: 0.8 }}
                                           >
                                                  HACK-O-HOLICS <span className="version">6.0</span>
+                                                 <span className="premium-star"></span>
                                           </motion.h1>
 
                                           <motion.div
@@ -65,24 +80,7 @@ const IntroLoader: React.FC<IntroLoaderProps> = ({ isLoading }) => {
                                           </motion.div>
                                    </div>
 
-                                   {/* IEEE Computer Society Badge */}
-                                   <motion.div
-                                          className="ieee-cs-badge"
-                                          initial={{ opacity: 0, y: 30 }}
-                                          animate={{ opacity: 1, y: 0 }}
-                                          transition={{ delay: 1.5, duration: 0.8 }}
-                                   >
-                                          <div className="badge-icon">
-                                                 <Cpu size={24} color="var(--neon-blue)" />
-                                          </div>
-                                          <div className="badge-text">
-                                                 <strong>IEEE Computer Society</strong>
-                                          </div>
-                                          <div className="badge-icon">
-                                                 <Terminal size={24} color="var(--neon-blue)" />
-                                          </div>
-                                   </motion.div>
-
+                                   
                                    <motion.div
                                           className="loading-bar-container"
                                           initial={{ opacity: 0 }}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Mail, MapPin, Github } from 'lucide-react';
+import { Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
 import './FooterSection.css';
 
 const FooterSection: React.FC = () => {
@@ -23,10 +23,10 @@ const FooterSection: React.FC = () => {
                                           <p className="footer-desc">
                                                  Innovate, integrate, and dominate at the most prestigious 24-hour national level hackathon hosted by IEEE SB Jeppiaar Engineering College.
                                           </p>
+                                          <p className="event-date">Event Date: April 7, 2026</p>
                                           <div className="social-links">
                                                  <a href="https://www.instagram.com/ieeesbjec?igsh=bmdqMGQ1Z3FrNXVp" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon"><Instagram size={20} /></a>
                                                  <a href="https://www.linkedin.com/in/ieee-sb-jec?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-icon"><Linkedin size={20} /></a>
-                                                 <a href="https://github.com/PRIYANKA075/HOH" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-icon"><Github size={20} /></a>
                                           </div>
                                    </div>
 
