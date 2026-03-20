@@ -314,6 +314,9 @@ const RegistrationSection: React.FC = () => {
                             >
                                    <h2 className="section-title">SECURE YOUR SPOT</h2>
                                    <div className="title-underline"></div>
+                                   <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', textAlign: 'center', margin: '1.5rem auto', maxWidth: '800px', lineHeight: '1.5' }}>
+                                          Registration Fee: ₹500 per team for IEEE members and ₹700 per team for non-IEEE members. Each team can have a maximum of 3–4 members.
+                                   </p>
                                    <div className="step-header">
                                           <p className="reg-subtitle mt-4">Step {currentStep} of 5 - {['Team Info', 'Team Members', 'Details', 'Payment', 'Review'][currentStep - 1]}</p>
                                           <div className="estimated-time">
